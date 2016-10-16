@@ -37,6 +37,7 @@ bot.on("message", message => {
   if(message.content.startsWith(`${prefix}eval`)) {
     if(message.author.id == (ownerID)) {
       var code = message.content.split(" ").slice(1).join(" ");
+      console.log("User has evaluated something!".green)
       message.channel.sendMessage(":diamond_shape_with_a_dot_inside: | **Hexadoc Evaluator**");
       message.channel.sendMessage("Input ```xl\n" +
       code +
@@ -47,22 +48,20 @@ bot.on("message", message => {
           var evaled = eval(code);
           if (typeof evaled !== 'string')
             evaled = require('util').inspect(evaled);
-          message.channel.sendMessage("Output```xl\n" +
+          msg.channel.sendMessage("Output```xl\n" +
           clean(evaled) +
           "\n```" +
           "Evaluation Complete! ✅"
           );
       }
       catch(err) {
-          message.channel.sendMessage("🚫 `ERROR` ```xl\n" +
+          msg.channel.sendMessage("🚫 `ERROR` ```xl\n" +
           clean(err) +
           "\n```");
       }
     }
-  })
-    }
   }
-});
+    })
 
 
 
