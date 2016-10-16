@@ -48,14 +48,14 @@ bot.on("message", message => {
           var evaled = eval(code);
           if (typeof evaled !== 'string')
             evaled = require('util').inspect(evaled);
-          msg.channel.sendMessage("Output```xl\n" +
+          message.channel.sendMessage("Output```xl\n" +
           clean(evaled) +
           "\n```" +
           "Evaluation Complete! ✅"
           );
       }
       catch(err) {
-          msg.channel.sendMessage("🚫 `ERROR` ```xl\n" +
+          message.channel.sendMessage("🚫 `ERROR` ```xl\n" +
           clean(err) +
           "\n```");
       }
