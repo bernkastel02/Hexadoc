@@ -1,0 +1,9 @@
+{
+    "functionName": "test",
+    "functionArguments": [
+        "test",
+        "test",
+        "test"
+    ],
+    "functionDescription": "This is made to test the documents command!"
+}
