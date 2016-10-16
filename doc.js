@@ -38,7 +38,7 @@ bot.on("message", message => {
     if(message.author.id == (ownerID)) {
       var code = message.content.split(" ").slice(1).join(" ");
       console.log("User has evaluated something!".green)
-      message.channel.sendMessage(":diamond_shape_with_a_dot_inside: | **Hexadoc Evaluator");
+      message.channel.sendMessage(":diamond_shape_with_a_dot_inside: | **Hexadoc Evaluator**");
       message.channel.sendMessage("Input ```xl\n" +
       code +
       "\n```"
