@@ -1,0 +1,8 @@
+{
+    "functionName": "snipGuildRole",
+    "functionArguments": [
+        "serverID",
+        "roleID"
+    ],
+    "functionDescription": "This function deletes a new role."
+}
